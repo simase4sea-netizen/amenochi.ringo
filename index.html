@@ -123,21 +123,21 @@
   }
 
   /* SECTION */
-  .section { max-width: 720px; margin: 0 auto; padding: 72px 24px; }
+  .section { max-width: 720px; margin: 0 auto; padding: 44px 20px; }
   .section-label {
     font-size: 10px; letter-spacing: 0.22em; color: var(--red);
-    text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 5px;
   }
   .section-title {
     font-family: 'Hiragino Mincho ProN', 'Yu Mincho', YuMincho, Georgia, serif;
     font-size: 24px; font-weight: 700; color: var(--black);
-    margin-bottom: 18px; line-height: 1.5;
+    margin-bottom: 12px; line-height: 1.45;
   }
   .section-body { font-size: 14px; color: var(--dark); line-height: 2.1; }
-  .divider { height: 1px; background: var(--border); }
+  .divider { height: 1px; background: var(--border); margin: 0; }
 
   /* FEATURES */
-  .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 28px; }
+  .feature-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 18px; }
   .feature-card {
     background: var(--white); border: 1px solid var(--border);
     border-top: 3px solid var(--red); border-radius: 12px; padding: 22px 18px;
@@ -155,7 +155,7 @@
   .story-box {
     background: var(--brown); color: #fff;
     border-radius: 20px; padding: 48px 36px;
-    margin-top: 20px; text-align: center;
+    margin-top: 14px; text-align: center;
     position: relative; overflow: hidden;
   }
   .story-box::before {
@@ -186,15 +186,17 @@
   .menu-tag.peach { background: #d06080; }
 
   /* SCENE */
-  .scene-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 24px; }
+  .scene-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 16px; }
   .scene-card {
     background: var(--white); border: 1px solid var(--border);
-    border-radius: 14px; padding: 20px 16px; text-align: center;
+    border-radius: 14px; padding: 20px 20px;
+    display: flex; align-items: flex-start; gap: 16px;
   }
-  .scene-emoji { font-size: 32px; margin-bottom: 10px; }
-  .scene-title { font-size: 14px; font-weight: 700; color: var(--black); margin-bottom: 6px; }
-  .scene-copy { font-size: 12px; color: var(--red); font-weight: 700; margin-bottom: 6px; line-height: 1.5; }
-  .scene-text { font-size: 11px; color: var(--mid); line-height: 1.7; }
+  .scene-emoji { font-size: 32px; flex-shrink: 0; margin-top: 2px; }
+  .scene-inner {}
+  .scene-title { font-size: 15px; font-weight: 700; color: var(--black); margin-bottom: 4px; }
+  .scene-copy { font-size: 14px; color: var(--red); font-weight: 700; margin-bottom: 5px; line-height: 1.5; }
+  .scene-text { font-size: 13px; color: var(--mid); line-height: 1.7; }
 
   /* AMBASSADOR */
   .ambassador-box {
@@ -262,7 +264,7 @@
 
   /* CTA */
   .cta-section {
-    background: var(--red-deep); padding: 72px 24px; text-align: center;
+    background: var(--red-deep); padding: 52px 20px; text-align: center;
   }
   .cta-inner { max-width: 600px; margin: 0 auto; }
   .cta-section h2 {
@@ -300,12 +302,76 @@
 
   /* MOBILE */
   @media (max-width: 600px) {
-    .hero h1 { font-size: 26px; }
-    .feature-grid { grid-template-columns: 1fr; }
-    .scene-grid { grid-template-columns: 1fr; }
-    .menu-grid { grid-template-columns: 1fr 1fr 1fr; }
-    .story-box { padding: 32px 22px; }
-    .story-text { font-size: 14px; }
+    /* HERO */
+    .hero { padding: 72px 20px 56px; min-height: 100svh; }
+    .hero-eyebrow { font-size: 10px; letter-spacing: 0.14em; margin-bottom: 14px; }
+    .hero h1 { font-size: 28px; line-height: 1.45; margin-bottom: 16px; }
+    .hero-sub { font-size: 13px; line-height: 1.85; margin-bottom: 28px; }
+    .hero-btns { gap: 10px; width: 100%; }
+    .btn-primary { font-size: 14px; padding: 14px 28px; width: 100%; justify-content: center; }
+    .hero-btns a[style] { font-size: 13px !important; padding: 12px 20px !important; width: 100%; justify-content: center; }
+    .btn-secondary { font-size: 13px; padding: 10px 20px; width: 100%; justify-content: center; }
+
+    /* SECTION */
+    .section { padding: 36px 18px; }
+    .section-label { font-size: 10px; }
+    .section-title { font-size: 20px; line-height: 1.5; margin-bottom: 14px; }
+    .section-body { font-size: 13px; line-height: 1.95; }
+
+    /* FEATURES */
+    .feature-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+    .feature-card { padding: 18px 16px; }
+    .feature-icon { font-size: 24px; }
+    .feature-title { font-size: 14px; }
+    .feature-text { font-size: 13px; }
+
+    /* STORY */
+    .story-box { padding: 32px 20px; border-radius: 16px; }
+    .story-text { font-size: 15px; line-height: 2.1; }
+
+    /* MENU */
+    .menu-full-img { border-radius: 12px; }
+    .menu-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .menu-tag { font-size: 13px; padding: 14px 10px; border-radius: 10px; }
+
+    /* EXPERIENCE */
+    .section > div[style*="grid-template-columns:1fr 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* SCENE */
+    .scene-grid { grid-template-columns: 1fr; gap: 10px; }
+    .scene-card { padding: 20px 18px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+    .scene-emoji { font-size: 28px; margin-bottom: 6px; }
+    .scene-title { font-size: 15px; margin-bottom: 4px; }
+    .scene-copy { font-size: 14px; line-height: 1.6; margin-bottom: 6px; }
+    .scene-text { font-size: 13px; line-height: 1.75; }
+
+    /* AMBASSADOR */
+    .ambassador-img { max-height: 280px; }
+    .ambassador-body { padding: 18px 18px; }
+    .ambassador-title { font-size: 16px; }
+    .ambassador-text { font-size: 13px; }
+
+    /* INFO */
+    .info-box { padding: 20px 18px; }
+    .info-name { font-size: 17px; }
+    .info-row { font-size: 13px; gap: 8px; }
+    .info-label { min-width: 72px; }
+
+    /* FAQ */
+    .faq-q { font-size: 13px; padding: 12px 16px; }
+    .faq-a { font-size: 13px; padding: 12px 16px 14px 48px; }
+
+    /* CTA */
+    .cta-section { padding: 40px 18px; }
+    .cta-section h2 { font-size: 22px; line-height: 1.5; }
+    .cta-sub { font-size: 13px; margin-bottom: 28px; }
+    .cta-btns { width: 100%; }
+    .cta-btn-main { font-size: 15px; padding: 16px 28px; width: 100%; justify-content: center; }
+    .cta-btn-ig { font-size: 13px; padding: 13px 24px; width: 100%; justify-content: center; }
+    .cta-btn-map { font-size: 13px; }
+    .cta-btns a[style*="06C755"] { width: 100%; justify-content: center; font-size: 14px !important; padding: 15px 24px !important; }
   }
 </style>
 </head>
@@ -458,21 +524,27 @@
   <div class="scene-grid">
     <div class="scene-card">
       <p class="scene-emoji">🌅</p>
-      <p class="scene-title">デートに</p>
-      <p class="scene-copy">「次のデート、<br>ここにしない？」</p>
-      <p class="scene-text">海×夕方×写真映え。インスタに残したい時間が生まれます。</p>
+      <div class="scene-inner">
+        <p class="scene-title">デートに</p>
+        <p class="scene-copy">「次のデート、ここにしない？」</p>
+        <p class="scene-text">海×夕方×写真映え。インスタに残したい時間が生まれます。</p>
+      </div>
     </div>
     <div class="scene-card">
       <p class="scene-emoji">🚗</p>
-      <p class="scene-title">ドライブに</p>
-      <p class="scene-copy">「目的地にする<br>スイーツ」</p>
-      <p class="scene-text">高松から小旅行気分。駐車場完備。ドライブのゴールに。</p>
+      <div class="scene-inner">
+        <p class="scene-title">ドライブに</p>
+        <p class="scene-copy">「目的地にするスイーツ」</p>
+        <p class="scene-text">高松から小旅行気分。駐車場完備。ドライブのゴールに。</p>
+      </div>
     </div>
     <div class="scene-card">
       <p class="scene-emoji">🏝️</p>
-      <p class="scene-title">観光に</p>
-      <p class="scene-copy">「うどんの後は、<br>りんご飴へ」</p>
-      <p class="scene-text">香川の新定番。SNS映えする一品で旅の思い出が完成。</p>
+      <div class="scene-inner">
+        <p class="scene-title">観光に</p>
+        <p class="scene-copy">「うどんの後は、りんご飴へ」</p>
+        <p class="scene-text">香川の新定番。SNS映えする一品で旅の思い出が完成。</p>
+      </div>
     </div>
   </div>
 </div>
@@ -518,10 +590,7 @@
       <div class="faq-q"><span class="faq-q-icon">Q</span>駐車場はありますか？</div>
       <div class="faq-a">駐車場完備しています。ドライブがてら気軽にお越しください。</div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q"><span class="faq-q-icon">Q</span>混雑する時間帯はありますか？</div>
-      <div class="faq-a">週末の昼〜夕方が特に賑わいます。最新情報・営業状況はInstagramでご確認ください。</div>
-    </div>
+
   </div>
 </div>
 
@@ -534,6 +603,10 @@
     <div class="info-row">
       <span class="info-label">住所</span>
       <span class="info-val">香川県高松市庵治町</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">営業時間</span>
+      <span class="info-val">土日祝 12:00〜19:00</span>
     </div>
     <div class="info-row">
       <span class="info-label">席数</span>
